@@ -11,12 +11,11 @@ function App() {
   const [isPriceLoading, setIsPriceLoading] = useState(false);
 
   const handlePriceQuery = async (event) => {
-  	const client = new CostgoldClient(BASE_URL);
+  	const client = new CostgoldClient(import.meta.env.VITE_BASE_URL);
   	const response = client.getPrice(event.target.product.value);
 	setIsPriceLoading(true);
 	const newPrice = (await response).Price;
 	setIsPriceLoading(false);
-	console.log(newPrice)
 	setPrice(newPrice);
   }
   
