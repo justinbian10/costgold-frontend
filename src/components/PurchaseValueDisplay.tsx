@@ -86,7 +86,7 @@ function PaymentSummary({price, buyPrice, paymentName, feePercent, pureStatusPer
 		const maxBuyPrice = priceAfterPure / (1 + (0.01 * feePercent))
 		setBreakeven(maxBuyPrice);
 
-		const currPercent = floatToPercent(breakeven / buyPrice - 1);
+		const currPercent = floatToPercent(maxBuyPrice / buyPrice - 1);
 		setPercent(currPercent);
 		setBackground(currPercent);
 	}, [pureStatusPercent, price, buyPrice]);
