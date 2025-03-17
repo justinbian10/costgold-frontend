@@ -6,9 +6,17 @@ import CostgoldClient from "./helpers/CostgoldClient.tsx";
 
 function App() {
   const [price, setPrice] = useState(0);
+  const [buyPrice, setBuyPrice] = useState(0);
   const [isPriceLoading, setIsPriceLoading] = useState(false);
 
   const handlePriceQuery = async (event) => {
+	const inputBuyPrice = event.target.price.value != "" ? parseFloat(event.target.price.value) : 0;
+	if (Number.isNaN(inputBuyPrice)) {
+		setPrice(0);
+		return
+	}
+	setBuyPrice(inputBuyPrice);
+
   	const client = new CostgoldClient(import.meta.env.VITE_BASE_URL);
   	const response = client.getPrice(event.target.product.value);
 	setIsPriceLoading(true);
@@ -32,7 +40,7 @@ function App() {
     	<div className="flex items-center flex-col mx-auto" >
 		<ProductForm handlePriceQuery={handlePriceQuery}/>
 		<p>{displayPrice()}</p>
-		<PurchaseValueDisplay price={price} buyPrice={price} />
+		<PurchaseValueDisplay price={price} buyPrice={buyPrice} />
 	</div>
     </>
   )

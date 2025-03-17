@@ -8,7 +8,7 @@ function ProductForm({handlePriceQuery}) {
   return (
 	<form onSubmit={handleSubmit} className="p-10 flex gap-4 flex-wrap">
 		<div className="basis-[calc(50%-8px)] grow-1 flex flex-col">
-			<label htmlFor="price" className="text-md">Price:</label>
+			<label htmlFor="price" className="text-md">Purchase Price:</label>
 			<input type="text" id="price" name="price" className="border text-md appearance-none rounded-sm p-1 basis-full" />
 		</div>
 		<label htmlFor="product" className="basis-[calc(50%-8px)] grow-1 flex flex-col">
