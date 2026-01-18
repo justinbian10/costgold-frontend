@@ -22,7 +22,7 @@ function ProductForm({handlePriceQuery}) {
 				<option value="one-oz-maple-leaf-26">1oz Maple Leaf 26</option>
 				<option value="one-oz-maple-leaf-any">1oz Maple Leaf Any</option>
 				<option value="one-oz-buffalo-coin-26">1oz Buffalo Coin 26</option>
-				<option value="one-oz-buffalo-coin-any">1oz Buffal Coin Any</option>
+				<option value="one-oz-buffalo-coin-any">1oz Buffalo Coin Any</option>
 				<option value="one-oz-eagle-coin-25">1oz Eagle Coin 26</option>
 				<option value="one-oz-eagle-coin-any">1oz Eagle Coin Any</option>
 				<option value="50-gram-fortuna">50g Fortuna</option>
