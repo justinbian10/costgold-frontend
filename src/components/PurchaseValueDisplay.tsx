@@ -36,11 +36,11 @@ function PurchaseValueDisplay({price, buyPrice}) {
 
 	return (
 		<div className="grid grid-cols-5 gap-2 p-10 w-full">
-			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="Kasheesh Full Fee*" feePercent="2" pureStatusPercent={pureStatusPercent} />
-			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="Kasheesh Citi AA Biz + PBP*" feePercent=".2" pureStatusPercent={pureStatusPercent} />
-			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="Any Visa 1%" feePercent="-1" pureStatusPercent={pureStatusPercent} />
+			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="0%" feePercent="0" pureStatusPercent={pureStatusPercent} />
+			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="1%" feePercent="-1" pureStatusPercent={pureStatusPercent} />
 			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="Citi AA Biz + PBP*" feePercent="-1.8" pureStatusPercent={pureStatusPercent} />
-			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="Venmo + PBP" feePercent="-5" pureStatusPercent={pureStatusPercent} />
+			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="2%" feePercent="-2" pureStatusPercent={pureStatusPercent} />
+			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="Venmo + PBP*" feePercent="-5" pureStatusPercent={pureStatusPercent} />
 			<p className="col-span-2">Pure Status</p>
 			<select name="product" className="border text-md appearance-none rounded-sm p-1 col-span-3 flex items-center" onChange={handleStatusChange}>
 				<option value=".75">Copper</option>
