@@ -42,7 +42,7 @@ function PurchaseValueDisplay({price, buyPrice}) {
 			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="2%" feePercent="-2" pureStatusPercent={pureStatusPercent} />
 			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="2.5% (Chase Ink Premier)" feePercent="-2.5" pureStatusPercent={pureStatusPercent} />
 			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="5% (Venmo + PBP*)" feePercent="-5" pureStatusPercent={pureStatusPercent} />
-			<p className="col-span-2">Pure Status</p>
+			<p className="col-span-2 font-semibold">Pure Status</p>
 			<select name="product" className="border text-md appearance-none rounded-sm p-1 col-span-4 flex items-center" onChange={handleStatusChange}>
 				<option value=".75">Copper</option>
 				<option value=".7">Silver</option>
@@ -52,10 +52,6 @@ function PurchaseValueDisplay({price, buyPrice}) {
 
 		</div>
 	)
-
-			//{displayPaymentSummary("Kasheesh Full Fee*", 2)}
-			//{displayPaymentSummary("Citi AA Biz + PBP*", -1.8)}
-			//{displayPaymentSummary("Venmo + PBP", -5)}
 }
 
 
@@ -94,10 +90,10 @@ function PaymentSummary({price, buyPrice, paymentName, feePercent, pureStatusPer
 
 	return (
 		<>
-			<h3 className="text-center sm:text-left col-span-6 sm:col-span-2">{paymentName}</h3>
+			<h3 className="font-bold sm:text-left col-span-6 sm:col-span-3">{paymentName}</h3>
 			<p className="border text-center w-full col-span-2 sm:col-span-1">{`$${(breakeven).toFixed(2)}`}</p>
 			<p className={`border text-center w-full col-span-2 sm:col-span-1 ${backgroundColor}`}>{`${(breakeven - buyPrice).toFixed(2)}`}</p>
-			<p className={"border text-right col-span-2 sm:col-span-2 " + backgroundColor}>{percent}%</p>			
+			<p className={"border text-right col-span-2 sm:col-span-1 " + backgroundColor}>{percent}%</p>			
 		</>
 	)
 }
