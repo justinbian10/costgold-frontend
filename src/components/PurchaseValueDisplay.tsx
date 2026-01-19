@@ -35,7 +35,7 @@ function PurchaseValueDisplay({price, buyPrice}) {
 	}
 
 	return (
-		<div className="grid grid-cols-5 gap-2 p-10 w-full">
+		<div className="grid grid-cols-6 gap-2 p-10 w-full">
 			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="0%" feePercent="0" pureStatusPercent={pureStatusPercent} />
 			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="1%" feePercent="-1" pureStatusPercent={pureStatusPercent} />
 			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="1.8% (Citi AA Biz + PBP*)" feePercent="-1.8" pureStatusPercent={pureStatusPercent} />
@@ -43,7 +43,7 @@ function PurchaseValueDisplay({price, buyPrice}) {
 			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="2.5% (Chase Ink Premier)" feePercent="-2.5" pureStatusPercent={pureStatusPercent} />
 			<PaymentSummary price={price} buyPrice={buyPrice} paymentName="5% (Venmo + PBP*)" feePercent="-5" pureStatusPercent={pureStatusPercent} />
 			<p className="col-span-2">Pure Status</p>
-			<select name="product" className="border text-md appearance-none rounded-sm p-1 col-span-3 flex items-center" onChange={handleStatusChange}>
+			<select name="product" className="border text-md appearance-none rounded-sm p-1 col-span-4 flex items-center" onChange={handleStatusChange}>
 				<option value=".75">Copper</option>
 				<option value=".7">Silver</option>
 				<option value=".625">Gold</option>
@@ -94,10 +94,10 @@ function PaymentSummary({price, buyPrice, paymentName, feePercent, pureStatusPer
 
 	return (
 		<>
-			<h3 className="col-span-2">{paymentName}</h3>
-			<p className="border text-center w-full">{`$${(breakeven).toFixed(2)}`}</p>
-			<p className={`border text-center w-full ${backgroundColor}`}>{`${(breakeven - buyPrice).toFixed(2)}`}</p>
-			<p className={"text-right " + backgroundColor}>{percent}%</p>			
+			<h3 className="text-center sm:text-left col-span-6 sm:col-span-2">{paymentName}</h3>
+			<p className="border text-center w-full col-span-2 sm:col-span-1">{`$${(breakeven).toFixed(2)}`}</p>
+			<p className={`border text-center w-full col-span-2 sm:col-span-1 ${backgroundColor}`}>{`${(breakeven - buyPrice).toFixed(2)}`}</p>
+			<p className={"border text-right col-span-2 sm:col-span-2 " + backgroundColor}>{percent}%</p>			
 		</>
 	)
 }
