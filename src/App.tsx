@@ -27,12 +27,12 @@ function App() {
   
   const displayPrice = () => {
 	if (isPriceLoading) {
-		return "Loading";
+		return <div className="text-light">Loading...</div>;
 	}
 	if (price === 0) {
 		return ""
 	}
-	return <div>Pure Sell Price: <span className="font-semibold text-sky-700">${price.toFixed(2)}</span></div>;
+	return <div>Pure Sell Price: <span className="font-semibold text-sky-600">${price.toFixed(2)}</span></div>;
   }
 
   return (
