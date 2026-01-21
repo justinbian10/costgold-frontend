@@ -14,7 +14,7 @@ function ProductForm({handlePriceQuery}) {
 		<label htmlFor="product" className="basis-[calc(50%-8px)] grow-1 flex flex-col">
 			Product:
 			<select name="product" className="border text-md appearance-none rounded-sm p-1 basis-full">
-				<option value="hi">Hi</option>
+				<option value=""></option>
 				<option value="one-oz-fortuna">1oz Fortuna</option>
 				<option value="one-oz-koi">1oz Koi</option>
 				<option value="one-oz-rand">1oz Rand</option>

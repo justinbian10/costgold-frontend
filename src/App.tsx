@@ -32,7 +32,7 @@ function App() {
 	if (price === 0) {
 		return ""
 	}
-	return `$${price.toFixed(2)}`;
+	return <div>Pure Sell Price: <span className="font-semibold text-sky-700">${price.toFixed(2)}</span></div>;
   }
 
   return (
